@@ -190,7 +190,7 @@
         <script>
             var answer = getGrade;
             report("#A2a", classroom[0].quizes.map(function(grade)
-                {return classroom[0].quizes.grade}                                  ) )
+                {return classroom[0].quizes[0]}))                                
         </script>
     </div>
 
@@ -199,13 +199,10 @@
     <div id="A2">
         <h3>Find the mean of the quiz grades for the first penguin.</h3>
         <script>
-            var QuizA = classroom.map(function(student)
-                    {
-                    return classroom.quizes
-                    }
-                                     )
-           var answer = "please complete";
-            report("#A2", d3.mean(QuizA));
+            var answer = getGrade;
+            report("#A2", classroom[0].quizes.map(function(grade)
+                {return classroom[0].quizes[0]}))                                
+                                            
         
         </script>
     </div>
@@ -213,8 +210,12 @@
     <div id="A3">
         <h3>Create a function to find the mean of the quiz grades for a given penguin.</h3>
         <script>
+              var getGrade = function(quiz) {
+                return classroom[3].quiz.grade;
+            }
+
             var answer = "please complete";
-            report("#A3", answer)
+            report("#A3",)
         </script>
     </div>
 
