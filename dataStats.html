@@ -242,9 +242,9 @@
     <div id="A5">
         <h3>Find the mean of all the quiz scores of the class. (one number)</h3>
         <script>
-            
-            var answer = "please complete";
-            report("#A5", answer)
+          var answer = classroom.map(getGrademean);
+          
+            report("#A5", d3.mean(answer))
         </script>
     </div>
 
