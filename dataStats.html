@@ -188,9 +188,13 @@
     <div id="A2a">
         <h3>Report the array of all quiz grades for the first penguin.</h3>
         <script>
-            var answer = getGrade;
-            report("#A2a", classroom[0].quizes.map(function(grade)
-                {return classroom[0].quizes[0]}))                                
+            var Grades= classroom[0].quizes.map(function(quiz)
+             { 
+            return (quiz.grade)
+            })
+            var answer =Grades;
+             report ("A2a",Grades)           
+            
         </script>
     </div>
 
@@ -199,9 +203,13 @@
     <div id="A2">
         <h3>Find the mean of the quiz grades for the first penguin.</h3>
         <script>
-            var answer = getGrade;
-            report("#A2", classroom[0].quizes.map(function(grade)
-                {return classroom[0].quizes[0]}))                                
+            var Grades= classroom[0].quizes.map(function(quiz)
+            {
+                return (quiz.grade)
+            })
+            var answer= Grades;
+            report ("#A2", d3.mean(Grades))
+            
                                             
         
         </script>
@@ -210,19 +218,23 @@
     <div id="A3">
         <h3>Create a function to find the mean of the quiz grades for a given penguin.</h3>
         <script>
-              var getGrade = function(quiz) {
-                return classroom[3].quiz.grade;
+            var getGrademean= function(penguin)
+            {
+              var Grades=penguin.quizes.map(function(quiz)
+              { 
+              return (quiz.grade)
+              })
+              return d3.mean(Grades)
             }
-
-            var answer = "please complete";
-            report("#A3",)
+               var answer = getGrade;
+            report("#A3", getGrademean(classroom[8]))
         </script>
     </div>
 
     <div id="A4">
         <h3>Create an array of the mean quiz score of each penguins. Use one line of "code"</h3>
         <script>
-            var answer = "please complete";
+            var answer = classroom.map(getGrademean);
             report("#A4", answer)
         </script>
     </div>
@@ -230,6 +242,7 @@
     <div id="A5">
         <h3>Find the mean of all the quiz scores of the class. (one number)</h3>
         <script>
+            
             var answer = "please complete";
             report("#A5", answer)
         </script>
